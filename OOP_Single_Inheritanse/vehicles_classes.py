@@ -4,20 +4,20 @@
 # Щоб отримати доступ до неї з класів Car та Train вкажи для них клас Vehicle як батьківський.
 # Зверни увагу, що після рефакторингу в класах Car та Train повинна залишитися тільки реалізація їх власних методів wash та buy_ticket.
 
-class Car:
+class Vehicle:
+    def go(self, city: str) -> None:
+        print(f"Go to {city}")
+
+
+class Car(Vehicle):
     def wash(self) -> None:
         print("Washing the car...")
 
-    def go(self, city: str) -> None:
-        print(f"Go to {city}")
 
-
-class Train:
+class Train(Vehicle):
     def buy_ticket(self) -> None:
         print("Buying the ticket...")
 
-    def go(self, city: str) -> None:
-        print(f"Go to {city}")
 
 # Приклад:
 
