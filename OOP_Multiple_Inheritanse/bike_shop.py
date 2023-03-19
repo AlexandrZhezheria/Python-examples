@@ -26,11 +26,13 @@ class Bike:
 
 
 class MountainBike(Bike):
-    pass
+    def __init__(self, brand: str, model: str, max_speed: int) -> None:
+        super().__init__(brand, model, max_speed)
 
 
 class RoadBike(Bike):
-    pass
+    def __init__(self, brand: str, model: str, max_speed: int) -> None:
+        super().__init__(brand, model, max_speed)
 
 # Приклад:
 
