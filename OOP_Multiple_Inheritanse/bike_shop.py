@@ -10,34 +10,27 @@
 from __future__ import annotations
 
 
-class MountainBike:
+class Bike:
     def __init__(self, brand: str, model: str, max_speed: int) -> None:
         self.brand = brand
         self.model = model
         self.max_speed = max_speed
 
-    @staticmethod
-    def from_dict(bike_dict: dict) -> MountainBike:
-        return MountainBike(
+    @classmethod
+    def from_dict(cls, bike_dict: dict) -> Bike:
+        return cls(
             brand=bike_dict["brand"],
             model=bike_dict["model"],
             max_speed=bike_dict["max_speed"],
         )
 
 
-class RoadBike:
-    def __init__(self, brand: str, model: str, max_speed: int) -> None:
-        self.brand = brand
-        self.model = model
-        self.max_speed = max_speed
+class MountainBike(Bike):
+    pass
 
-    @staticmethod
-    def from_dict(bike_dict: dict) -> RoadBike:
-        return RoadBike(
-            brand=bike_dict["brand"],
-            model=bike_dict["model"],
-            max_speed=bike_dict["max_speed"],
-        )
+
+class RoadBike(Bike):
+    pass
 
 # Приклад:
 
