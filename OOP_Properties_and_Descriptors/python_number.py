@@ -65,22 +65,22 @@ class NumberInfo:
 
 number_int = NumberInfo(1)
 
-number_int.number == 1
-number_int.len_digits == 1
-number_int.is_integer is True
-number_int.is_float is False
-number_int.decimal == 0
-number_int.is_positive is True
-number_int.is_natural is True
-number_int.is_prime is False
------------------------------
+# number_int.number == 1
+# number_int.len_digits == 1
+# number_int.is_integer is True
+# number_int.is_float is False
+# number_int.decimal == 0
+# number_int.is_positive is True
+# number_int.is_natural is True
+# number_int.is_prime is False
+
 number_float = NumberInfo(123.1234)
 
-number_float.number == 123.1234
-number_float.len_digits == 3
-number_float.is_integer is False
-number_float.is_float is True
-number_float.decimal == 4
-number_float.is_positive is True
-number_float.is_natural is False
-number_float.is_prime is False
+# number_float.number == 123.1234
+# number_float.len_digits == 3
+# number_float.is_integer is False
+# number_float.is_float is True
+# number_float.decimal == 4
+# number_float.is_positive is True
+# number_float.is_natural is False
+# number_float.is_prime is False
