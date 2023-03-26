@@ -23,5 +23,7 @@ def convert(a: str, b: str) -> str:
 
 
 if __name__ == "__main__":
+    # calculate = typed_int(calculate)
+    # calculate = typed(int)(calculate)
     print(calculate(1, 2, 3))
     print("123", "Hello")
