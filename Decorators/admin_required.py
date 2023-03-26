@@ -21,8 +21,8 @@ def admin_required(func: Callable) -> Callable:
 
 # Приклад:
 @admin_required
-    def send_secure_information(user: dict) -> None:
-        print(f"{user['name']}, site's secure code is 'SecUR43Esit78Eco90DE'")
+def send_secure_information(user: dict) -> None:
+    print(f"{user['name']}, site's secure code is 'SecUR43Esit78Eco90DE'")
 
 send_secure_information({'name': 'Administrator', 'is_admin': True})
 # Administrator, site's secure code is 'SecUR43Esit78Eco90DE'
