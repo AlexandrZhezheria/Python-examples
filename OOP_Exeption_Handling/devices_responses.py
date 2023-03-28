@@ -48,7 +48,9 @@ class SlowResponse(Exception):
     self.response = response
 
   def __str__(self) -> str:
-    return f"Warning! {self.name} has a slow response of {self.response} ms."
+    return (
+      f"Warning! {self.name} has a slow response of {self.response} ms."
+    )
 
 
 class ExtraSlowResponse(SlowResponse):
@@ -58,30 +60,34 @@ class ExtraSlowResponse(SlowResponse):
 
 class DangerouslySlowResponse(ExtraSlowResponse):
   def __str__(self) -> str:
-    return f"Nuclear power station is under the danger! {self.name} has a dangerously slow response of {self.response} ms."
+    return (
+      f"Nuclear power station is under the danger! "
+      f"{self.name} has a dangerously slow response of {self.response} ms."
+    )
 
 
 def check_device_response(device: dict) -> None:
-  name: str = device["name"]
-  response: int = device["response"]
-  if response >= 101:
-    raise DangerouslySlowResponse(name=name, response=response)
-  elif response > 75:
-    raise ExtraSlowResponse(name=name, response=response)
-  elif response > 50:
-    raise SlowResponse(name=name, response=response)
+  if device["response"] > 100:
+    raise DangerouslySlowResponse(device["name"], device["response"])
+  if device["response"] > 75:
+    raise ExtraSlowResponse(device["name"], device["response"])
+  if device["response"] > 50:
+    raise SlowResponse(device["name"], device["response"])
 
 
 def check_station_devices(devices: list) -> None:
-  errors: list = []
+  correct_count = 0
   for device in devices:
     try:
       check_device_response(device)
-    except (SlowResponse, ExtraSlowResponse, DangerouslySlowResponse) as e:
-      errors.append(str(e))
-  if errors:
-    print("\n".join(errors))
-  else:
+      correct_count += 1
+    except DangerouslySlowResponse as e_info:
+      print(e_info, "We have a serious troubles!")
+    except ExtraSlowResponse as e_info:
+      print(e_info, "Needs to be repaired!")
+    except SlowResponse as e_info:
+      print(e_info, "Take attention!")
+  if correct_count == len(devices):
     print("Responses of all devices does not exceed the norm.")
 
 check_station_devices([
