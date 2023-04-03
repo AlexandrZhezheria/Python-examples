@@ -15,7 +15,7 @@ def fix_string_case(word: str) -> str:
     # Перевіряємо, якого регістру в рядку більше
     if uppercase_count > lowercase_count:
         return word.upper()
-    elif uppercase_count == lowercase_count:
+    elif uppercase_count >= lowercase_count:
         return word.lower()
     else:
         return word.lower()
@@ -27,3 +27,4 @@ fix_string_case("coDE")
 # fix_string_case("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase.
 # fix_string_case("CODe") = "CODE". Uppercase characters > lowercase. Change only the "e" to uppercase.
 # fix_string_case("coDE") = "code". Uppercase == lowercase. Change all to lowercase.
+
