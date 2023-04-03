@@ -41,7 +41,7 @@ def get_order(order: str) -> str:
     print(result.strip())
     return result.strip()
 
-# Розвязок ментора
+# Розвязок 2
 def get_order(order: str) -> str:
     menu = [
         "burger",

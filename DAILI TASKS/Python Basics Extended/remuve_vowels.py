@@ -10,7 +10,7 @@ def disemvowel_trolls(s: str) -> str:
     vowels = "aeiouAEIOU"
     return "".join(c for c in s if c not in vowels)
 
-# розвязок ментора:
+# розвязок 2:
 def disemvowel_trolls(sentence: str) -> str:
     for char in "aeiouAEIOU":
         sentence = sentence.replace(char, "")
