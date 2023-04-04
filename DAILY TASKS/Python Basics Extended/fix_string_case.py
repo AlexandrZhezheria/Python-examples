@@ -1,24 +1,36 @@
 # У цьому завданні тобі буде дано рядок, в якому можуть бути присутніми як великі, так і малі літери. Тобі потрібно написати функцію fix_string_case, яка перетворює рядок або тільки на нижній, або на верхній регістр залежно від того, яка кількість літер конкретного регістру переважає у рядку.
 # Якщо рядок містить однакову кількість великих і малих літер, перетвори рядок на нижній регістр.
 
+# def fix_string_case(word: str) -> str:
+#     uppercase_count = 0
+#     lowercase_count = 0
+#
+#     # Рахуємо кількість великих і малих літер у рядку
+#     for c in word:
+#         if c.isupper():
+#             uppercase_count += 1
+#         else:
+#             lowercase_count += 1
+#
+#     # Перевіряємо, якого регістру в рядку більше
+#     if uppercase_count > lowercase_count:
+#         return word.upper()
+#     elif uppercase_count >= lowercase_count:
+#         return word.lower()
+#     else:
+#         return word.lower()
+
 def fix_string_case(word: str) -> str:
-    uppercase_count = 0
-    lowercase_count = 0
-
-    # Рахуємо кількість великих і малих літер у рядку
-    for c in word:
-        if c.isupper():
-            uppercase_count += 1
-        else:
-            lowercase_count += 1
-
-    # Перевіряємо, якого регістру в рядку більше
-    if uppercase_count > lowercase_count:
+    lower_count = 0
+    upper_count = 0
+    for i in range(len(word)):
+        if word[i].islower():
+            lower_count += 1
+        elif word[i].isupper():
+            upper_count += 1
+    if lower_count < upper_count:
         return word.upper()
-    elif uppercase_count >= lowercase_count:
-        return word.lower()
-    else:
-        return word.lower()
+    return word.lower()
 
 fix_string_case("coDe")
 fix_string_case("CODe")
