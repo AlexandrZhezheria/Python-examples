@@ -15,6 +15,39 @@ class CalculatorTest(TestCase):
     def test_divide(self):
         self.assertEqual(calculator("8 / 4"), 2)
 
+    def test_no_signs(self):
+        with self.assertRaises(ValueError) as e:
+            calculator("asdqwezxc")
+        self.assertEqual("Выражение должно содержать хотя бы один знак (+-/*)", e.exception.args[0])
+
+    def test_two_signs(self):
+        with self.assertRaises(ValueError) as e:
+            calculator("2 + 2 + 2")
+        self.assertEqual("Выражение должно содержать 2 целых числа и 1 знак", e.exception.args[0])
+
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
