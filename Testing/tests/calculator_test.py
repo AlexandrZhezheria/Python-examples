@@ -25,6 +25,11 @@ class CalculatorTest(TestCase):
             calculator("2 + 2 + 2")
         self.assertEqual("Выражение должно содержать 2 целых числа и 1 знак", e.exception.args[0])
 
+    def test_many_signs(self):
+        with self.assertRaises(ValueError) as e:
+            calculator("3 + 2 * 10")
+        self.assertEqual("Выражение должно содержать 2 целых числа и 1 знак", e.exception.args[0])
+
 
 if __name__ == '__main__':
     main()
