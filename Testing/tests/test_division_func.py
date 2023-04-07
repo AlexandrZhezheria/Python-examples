@@ -1,4 +1,4 @@
-from Testing.utils import division
+from Testing.my_funcs.utils import division
 import pytest
 
 
