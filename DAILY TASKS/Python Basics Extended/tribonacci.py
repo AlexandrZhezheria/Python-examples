@@ -17,5 +17,13 @@
 # Але що, якщо ми почнемо з [0, 0, 1] в якості signature? Починаючи з [0, 1] замість [1, 1] в основному зсуває звичайну послідовність Фібоначчі на одну позицію, у вас може виникнути спокуса подумати, що ми отримаємо ту ж послідовність, зрушену на 2 місця, але це не так, і ми отримаємо: [0, 0, 1, 1, 2, 4, 7, 13, 24, ...]
 
 def tribonacci(signature: list, number: int) -> list:
-    # write your code here
-    pass
+    if number == 0:
+        return []
+    elif number <= 3:
+        return signature[:number]
+    else:
+        sequence = signature.copy()
+        for i in range(3, number):
+            next_num = sum(sequence[-3:])
+            sequence.append(next_num)
+        return sequence
