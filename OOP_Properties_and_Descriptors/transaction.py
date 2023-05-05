@@ -67,7 +67,7 @@ print(
     transaction.usd,                 # 70.0 (2000 * 0.035)
     transaction.description,         # "Some description"
 )
-transaction.description = "new"      # AttributeError: can't set attribute
+transaction.description = "new"      # AttributeError: can"t set attribute
 
 transaction = Transaction(
     amount=100,
@@ -81,4 +81,4 @@ print(
     transaction.usd,                 # 100.0
     transaction.description,         # "No description provided"
 )
-transaction.description = "new"      # AttributeError: can't set
+transaction.description = "new"      # AttributeError: can"t set

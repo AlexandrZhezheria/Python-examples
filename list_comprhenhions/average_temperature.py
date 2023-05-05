@@ -15,12 +15,12 @@ def average_temperature(months: dict, temperature: int) -> dict:
 
 
 # Приклад:
-months = {'Dec': -4.9, 'Jan': -2.2, 'Feb': 2.1}
+months = {"Dec": -4.9, "Jan": -2.2, "Feb": 2.1}
 temperature = 5
 average_temperature(months, temperature) # == {}
 # Нема місяців з середньою температурою більше 5
 
-months = {'Jun': 18, 'Jul': 23.8, 'Aug': 22.9}
+months = {"Jun": 18, "Jul": 23.8, "Aug": 22.9}
 temperature = 20
-average_temperature(months, temperature) # == {'Jul': 23.8, 'Aug': 22.9}
+average_temperature(months, temperature) # == {"Jul": 23.8, "Aug": 22.9}
 # Два місяці з середньою температурою більше 20

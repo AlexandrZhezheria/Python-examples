@@ -7,7 +7,7 @@
 # Ці методи можуть додавати каву, воду, цукор, молоко відповідно. Також у Espresso є метод make_coffee -
 # який викликає усі попередні методи і повертає cup_with_coffee.
 # coffee = Espresso().make_coffee()
-# coffee == ['Coffee', 'Hot water', 'Sugar']
+# coffee == ["Coffee", "Hot water", "Sugar"]
 # # за замовчанням в еспресо не входить молоко
 # Але що як тобі потрібно американо (подвійна порція води), або ти б хотів еспресо без кофеїну?
 # Кращий спосіб – це написати міксини, які будуть перевизначати якийсь з методів
@@ -20,16 +20,16 @@
 # Міксини не повинні перевизначати метод make_coffee. Використовуючи ці міксини і Espresso в правильному порядку в наслідуванні, напиши такі класи
 # Americano
 # coffee = Americano().make_coffee()
-# coffee == ['Coffee', 'Hot water x2', 'Sugar']
+# coffee == ["Coffee", "Hot water x2", "Sugar"]
 # CaffeineFreeEspresso
 # coffee = CaffeineFreeEspresso().make_coffee()
-# coffee == ['Caffeine free coffee', 'Hot water', 'Sugar']
+# coffee == ["Caffeine free coffee", "Hot water", "Sugar"]
 # NoSugarMilkEspresso
 # coffee = NoSugarMilkEspresso().make_coffee()
-# coffee == ['Coffee', 'Hot water', 'Milk']
+# coffee == ["Coffee", "Hot water", "Milk"]
 # CaffeineFreeNoSugarMilkAmericano
 # coffee = CaffeineFreeNoSugarMilkAmericano().make_coffee()
-# coffee == ['Caffeine free coffee', 'Hot water x2', 'Milk']
+# coffee == ["Caffeine free coffee", "Hot water x2", "Milk"]
 # Тіла цих класів повинні складатися тільки з виразу pass.
 
 class Espresso:

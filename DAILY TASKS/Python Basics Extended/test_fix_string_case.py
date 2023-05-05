@@ -25,11 +25,11 @@ def test_should_return_type_str():
         ("QWERTYUIOP", "QWERTYUIOP"),
         ("f  jj  MM A", "f  jj  mm a"),
         ("MATE academy 2022 @)@@", "mate academy 2022 @)@@"),
-        ("THAT'S fine, I STUDY here!", "THAT'S FINE, I STUDY HERE!"),
+        ("THAT"S fine, I STUDY here!", "THAT"S FINE, I STUDY HERE!"),
     ],
 )
 def test_fix_string_case(word, modified_word):
     assert fix_string_case(word) == modified_word, (
-        f"Function 'fix_string_case' should return {modified_word} "
+        f"Function "fix_string_case" should return {modified_word} "
         f"when sentence is {word}"
     )

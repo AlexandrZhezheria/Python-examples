@@ -143,7 +143,7 @@ from functools import wraps
 
 
 def decorator_func(func):
-    """Decorator doc-string"""'
+    """Decorator doc-string""""
 
 
 @wraps(func)
@@ -301,10 +301,10 @@ def sleeping(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         current_time = time.localtime()
-        print(f"Started function sleeping at {time.strftime('%H:%M:%S', current_time)}")
+        print(f"Started function sleeping at {time.strftime("%H:%M:%S", current_time)}")
         time.sleep(3)
         current_time = time.localtime()
-        print(f"Ended function sleeping at {time.strftime('%H:%M:%S", current_time)}')
+        print(f"Ended function sleeping at {time.strftime("%H:%M:%S", current_time)}")
         return func(*args, **kwargs)
     return wrapper
 

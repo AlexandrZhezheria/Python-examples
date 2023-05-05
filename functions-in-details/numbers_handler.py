@@ -7,7 +7,7 @@
 # Крім того, реалізуй значення за замовчуванням для цих колбеків.
 # Для before напиши функцію new_number, яка приймає число та виводить рядок Received a new number: {number} за допомогою функції print.
 # Для action напиши функцію is_positive, яка приймає число та виводить рядок {number} is a
-# positive number якщо число number - додатне, рядок Zero, якщо число дорівнює нулю, і рядок {number} is a negative number, якщо число від'ємне.
+# positive number якщо число number - додатне, рядок Zero, якщо число дорівнює нулю, і рядок {number} is a negative number, якщо число від"ємне.
 # Для after напиши функцію print_bye, яка просто виводить рядок Bye!.
 
 from typing import Callable

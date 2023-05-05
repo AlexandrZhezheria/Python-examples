@@ -1,4 +1,4 @@
-# Ти розробляєш веб-сервіс, на якому можуть реєструватися користувачі. Але, перед тим як додати їх дані аутентифікації в базу даних, треба, щоб ім'я та пароль користувача пройшли валідацію.
+# Ти розробляєш веб-сервіс, на якому можуть реєструватися користувачі. Але, перед тим як додати їх дані аутентифікації в базу даних, треба, щоб ім"я та пароль користувача пройшли валідацію.
 
 class InvalidUsername(Exception):
     pass
@@ -41,7 +41,7 @@ def db_user_creation(user: dict) -> None:
         user_validation(user)
     except ValidationError:
         raise DBUserCreationError("Invalid user data provided!")
-    print(f"{user['username']} is created in the database.")
+    print(f"{user["username"]} is created in the database.")
 
 # Напиши функції:
 # username_validation - приймає username і викликає виняток InvalidUsername, якщо довжина username менша за 4 чи більша за 15.

@@ -16,10 +16,10 @@ def copy_robot(robot: Robot) -> Robot:
     return Robot(robot.model, robot.constructor, new_serial_no)
 
 # Приклад:
-robot = Robot('g135', 'Alex', 1664)
+robot = Robot("g135", "Alex", 1664)
 robot_copy = copy_robot(robot)
 
 robot_copy is robot == False
-robot_copy.model == 'g135'
+robot_copy.model == "g135"
 robot.serial_no == 1664
 robot_copy.serial_no == 1665

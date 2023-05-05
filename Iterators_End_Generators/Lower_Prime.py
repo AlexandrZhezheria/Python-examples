@@ -37,7 +37,7 @@ lower_prime = LowerPrime(number=11)
 lower_prime_it = iter(lower_prime)
 next(lower_prime_it) == 7
 next(lower_prime_it) == 5
-lower_prime_it.number == 11  # attribute 'number' does not change
+lower_prime_it.number == 11  # attribute "number" does not change
 
 lower_prime = LowerPrime(number=3)
 lower_prime_it = iter(lower_prime)

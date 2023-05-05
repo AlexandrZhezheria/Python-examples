@@ -47,7 +47,7 @@ def admin_required(func: Callable) -> Callable:
 @login_required
 @admin_required
 def access_admin_page(request: dict) -> None:
-    print(f"Welcome to the admin page, {request['user']['full_name']}")
+    print(f"Welcome to the admin page, {request["user"]["full_name"]}")
 
 
 # Приклад:

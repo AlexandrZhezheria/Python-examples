@@ -69,6 +69,6 @@ bool_value = make_bool("false")
 # BoolConversionError: Cannot convert to the bool false value
 
 bool_value = make_bool({True})
-# BoolConversionError: Cannot convert to the bool <class 'set'> type
+# BoolConversionError: Cannot convert to the bool <class "set"> type
 
 # Виняток BoolConversionError має наслідуватись лише від класу Exception.

@@ -3,13 +3,13 @@
 # у одну з мішеней. Якщо значення True, то значить даним пострілом мішень була вражена, якщо False, то значить ні.
 # Таким чином, якщо у списку хоча б одне значення True, то мішень була вражена, якщо всі False, то ні.
 # Функція all_targets_hit_upgrade повертає True, якщо усі мішені були вражені.
-# Функція повинна містити тільки конструкцію return. Використовуй list comprehension. Також для розв'язання цієї
+# Функція повинна містити тільки конструкцію return. Використовуй list comprehension. Також для розв"язання цієї
 # задачі дуже зручно використовувати функції any та all
 
 def all_targets_hit_upgrade(attempts: list) -> bool:
     return all(any(hit for hit in target) for target in attempts)
 
-    # return all([any(attempt) for attempt in attempts]) розв'язок ментора
+    # return all([any(attempt) for attempt in attempts]) розв"язок ментора
 
 
 # Приклад:

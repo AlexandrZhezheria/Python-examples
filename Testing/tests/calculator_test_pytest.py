@@ -37,5 +37,5 @@ def test_many_signs():
     assert "Выражение должно содержать 2 целых числа и 1 знак" == error.value.args[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pytest.main()

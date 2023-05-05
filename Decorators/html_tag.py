@@ -21,15 +21,15 @@ def html_tag(tag: str) -> Callable:
 
 # Приклад:
 
-@html_tag('div')
+@html_tag("div")
 def greeter(name: str) -> str:
     return f"Hello, {name}!"
 
-greeter('Alex') == "<div>Hello, Alex!</div>"
+greeter("Alex") == "<div>Hello, Alex!</div>"
 
-@html_tag('p')
-@html_tag('a')
+@html_tag("p")
+@html_tag("a")
 def greeter(name: str) -> str:
     return f"Hello, {name}!"
 
-greeter('Maxim') == "<p><a>Hello, Maxim!</a></p>"
+greeter("Maxim") == "<p><a>Hello, Maxim!</a></p>"

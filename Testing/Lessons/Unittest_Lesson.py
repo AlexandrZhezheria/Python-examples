@@ -21,7 +21,7 @@ def calculator(expression):
                 raise ValueError("Выражение должно содержать 2 целых числа и 1 знак")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(calculator("5 + 2"))
     print(calculator("5 - 2"))
     print(calculator("5 * 2"))

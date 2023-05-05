@@ -20,27 +20,27 @@ def get_users_data(users: list) -> dict:
 
 # Приклад:
 users = [
-          (12, 'Maxim', 'maxim@example.com', 'UBg11eub42hge')
+          (12, "Maxim", "maxim@example.com", "UBg11eub42hge")
         ] # Тільки один користувач
 get_users_data(users) == {
     12: {
-          'username': 'Maxim',
-          'email': 'maxim@example.com',
-          'password': 'UBg11eub42hge'
+          "username": "Maxim",
+          "email": "maxim@example.com",
+          "password": "UBg11eub42hge"
         },
 }  # В результаті словник з одним ключем - id користувача
 
 
 users = [
-            (12, 'Maxim', 'maxim@example.com', 'UBg11eub42hge'),
-            (13, 'Dmitro', 'dmitro@example.com', 'sdTioT36723fw'),
-            (14, 'Roman', 'roman@example.com', 'hbFEkj34NggE2'),
-            (15, 'Ivan', 'ivan@example.com', 'sdTioT36723fw'),
+            (12, "Maxim", "maxim@example.com", "UBg11eub42hge"),
+            (13, "Dmitro", "dmitro@example.com", "sdTioT36723fw"),
+            (14, "Roman", "roman@example.com", "hbFEkj34NggE2"),
+            (15, "Ivan", "ivan@example.com", "sdTioT36723fw"),
         ] # Чотири користувачі
 
 get_users_data(users) == {
-    12: {'username': 'Maxim', 'email': 'maxim@example.com', 'password': 'UBg11eub42hge'},
-    13: {'username': 'Dmitro', 'email': 'dmitro@example.com', 'password': 'sdTioT36723fw'},
-    14: {'username': 'Roman', 'email': 'roman@example.com', 'password': 'hbFEkj34NggE2'},
-    15: {'username': 'Ivan', 'email': 'ivan@example.com', 'password': 'sdTioT36723fw'},
+    12: {"username": "Maxim", "email": "maxim@example.com", "password": "UBg11eub42hge"},
+    13: {"username": "Dmitro", "email": "dmitro@example.com", "password": "sdTioT36723fw"},
+    14: {"username": "Roman", "email": "roman@example.com", "password": "hbFEkj34NggE2"},
+    15: {"username": "Ivan", "email": "ivan@example.com", "password": "sdTioT36723fw"},
 } # В результаті словник з чотирма ключами - id користувачів

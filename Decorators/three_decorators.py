@@ -1,6 +1,6 @@
 # В тебе є функція like_numbers, яка приймає список і повертає деякий рядок.
 # Напиши 3 декоратори arrow, number_filter, round_dict, такі що:
-# arrow перетворює вхідний словник у список рядків виду 'key -> value'.
+# arrow перетворює вхідний словник у список рядків виду "key -> value".
 # number_filter фільтрує вхідний список і залишає тільки числові типи
 # round_dict округлює числа у вхідному списку і створює словник, де ключ - це нове значення числа, а його значення - подвоєне нове значення числа.
 # Задекоруй функцію like_numbers трьома декораторами у правильному порядку так, щоб отримати результат показаний у прикладі.
@@ -37,7 +37,7 @@ def number_filter(func: Callable) -> Callable:
 @round_dict
 @arrow
 def like_numbers(items: list) -> str:
-    return f"I like to filter, rounding, doubling, store and decorate numbers: {', '.join(items)}!"
+    return f"I like to filter, rounding, doubling, store and decorate numbers: {", ".join(items)}!"
 
 
 # Приклад:
@@ -45,7 +45,7 @@ def like_numbers(items: list) -> str:
 # @number_filter
 # @arrow
 # def like_numbers(items: list):
-#     return f"I like to filter, rounding, doubling, store and decorate numbers: {', '.join(items)}!"
+#     return f"I like to filter, rounding, doubling, store and decorate numbers: {", ".join(items)}!"
 
 items = ["35", 2.1, 4, 8.88, -123, "S", {"a", "b", 5}]
 

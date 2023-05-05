@@ -5,7 +5,7 @@
 
 def create_permissions(users: list) -> None:
     for user in users:
-        print(f'Creating permissions for {user["username"]}')
+        print(f"Creating permissions for {user["username"]}")
 
 
 def only_admin(func):
@@ -17,14 +17,14 @@ def only_admin(func):
 @only_admin
 def create_permissions(users: list) -> None:
     for user in users:
-        print(f'Creating permissions for {user["username"]}')
+        print(f"Creating permissions for {user["username"]}")
 
 users = [
-     {'username': 'admin', 'is_admin': True},
-     {'username': 'moderator_a11', 'is_admin': True},
-     {'username': 'custom_user1', 'is_admin': False},
-     {'username': 'custom_user2', 'is_admin': False},
-     {'username': 'admin_2nd', 'is_admin': True},
+     {"username": "admin", "is_admin": True},
+     {"username": "moderator_a11", "is_admin": True},
+     {"username": "custom_user1", "is_admin": False},
+     {"username": "custom_user2", "is_admin": False},
+     {"username": "admin_2nd", "is_admin": True},
 ]
 
 create_permissions(users)
