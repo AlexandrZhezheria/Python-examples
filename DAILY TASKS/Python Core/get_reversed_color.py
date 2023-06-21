@@ -22,5 +22,10 @@
 # get_reversed_color("a23") # повертає "#FFF5DC"
 
 def get_reversed_color(hex_color: str) -> str:
-    # write your code here
-    pass
+    if (
+        type(hex_color) != str
+        or len(hex_color) > 6
+        or any(char.lower() not in "0123456789abcdef" for char in hex_color)
+    ):
+        raise ValueError
+    return "#%06X" % (16777215 - int("0" + hex_color, 16))
