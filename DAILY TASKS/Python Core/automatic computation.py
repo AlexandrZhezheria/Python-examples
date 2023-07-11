@@ -10,20 +10,18 @@ def count_segments(total_length):
     remaining_length = total_length  # Оставшаяся длина после вычета целых отрезков
     remaining_half = remaining_length / 2  # Оставшаяся длина, поделенная на два
 
-    if remaining_length < 200:  # Проверка, что оставшаяся длина не менее 200 мм
-        remaining_half = 0
+    # if remaining_length < 250:  # Проверка, что оставшаяся длина не менее 250 мм
+    #     remaining_half = 0
 
     return counts, remaining_half
 
 # Пример использования функции
-total_length = 3000  # Заданная общая длина
+total_length = 55760  # Заданная общая длина
 segment_counts, remaining_half = count_segments(total_length)
 
 # Вывод результатов на экран
-print("Количество отрезков длины 1000мм:", segment_counts[0])
+print("Количество отрезков длины 1000мм:",  segment_counts[0])
 print("Количество отрезков длины 750мм:", segment_counts[1])
 print("Количество отрезков длины 500мм:", segment_counts[2])
 print("Количество отрезков длины 250мм:", segment_counts[3])
 print("Оставшаяся длина, поделенная на два:", remaining_half)
-
-
