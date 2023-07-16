@@ -15,5 +15,13 @@
 # pendulum([-9, -2, -10, -6])  # повертає [-6, -10, -9, -2]
 
 def pendulum(lst: list) -> list:
-    # write your code here
-    pass
+    min_elem = min(lst)
+
+    if len(lst) % 2 == 0:
+        lst.insert((len(lst) - 1) // 2, min_elem)
+    else:
+        lst.sort(key=lambda x: x, reverse=False)
+        lst = list(set(lst))
+
+
+    return lst

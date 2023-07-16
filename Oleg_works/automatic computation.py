@@ -16,12 +16,12 @@ def count_segments(total_length):
     return counts, remaining_half
 
 # Пример использования функции
-total_length = 55760  # Заданная общая длина
+total_length = 15740  # Заданная общая длина
 segment_counts, remaining_half = count_segments(total_length)
 
 # Вывод результатов на экран
-print("Количество отрезков длины 1000мм:",  segment_counts[0])
-print("Количество отрезков длины 750мм:", segment_counts[1])
-print("Количество отрезков длины 500мм:", segment_counts[2])
-print("Количество отрезков длины 250мм:", segment_counts[3])
+print("Количество деталей 1000мм:",  segment_counts[0])
+print("Количество деталей 750мм:", segment_counts[1])
+print("Количество деталей 500мм:", segment_counts[2])
+print("Количество деталей 250мм:", segment_counts[3])
 print("Оставшаяся длина, поделенная на два:", remaining_half)
